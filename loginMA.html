@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="loginEstilo.css">
+</head>
+<body>
+    <section class="caja-login" >
+    <form action="/index.html">
+        <h1 class="title">Me.Archive</h1>
+
+        <label for="usuario">
+            <i class="fa-solid fa-user"></i>
+            <input required  placeholder="usuario" type="text" id="usuario">
+        </label>
+        <label for="contrasena">
+            <i class="fa-solid fa-lock"></i>
+            <input required minlength="7" maxlength="17" id="contrasena" placeholder="contraseña" type="password" >
+            <span class="validity"></span>
+        </label>
+           <button id="boton-ingresar" type="submit">ingresar</button>
+    </form>
+    <div class="caja-del-gato">
+       <img src="ojoAbierto.svg" alt="">
+    </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="javalogin.js"></script>
+</body>
+</html>

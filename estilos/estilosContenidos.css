@@ -1,0 +1,107 @@
+:root{
+    --TemaContenido: rgb(227, 235, 236);
+    --cajaSemana:rgb(50, 196, 176);
+}
+.caja-contenido{
+    position: absolute;
+    top: 1rem;
+    left: 15rem;
+    background: var(--TemaContenido);
+    width: 1100px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 1rem;
+    overflow: hidden;
+}
+.caja-contenido .mini-header{
+    background-image: url(/foto-portada.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 1050px;
+    height: 8rem;
+    border-radius: 10px;
+}
+.caja-contenido .mini-header h4{
+    position: absolute;
+    margin-top: 6.5rem;
+    margin-left: 10rem;
+    color: white;
+}
+.caja-contenido .mini-header .caja-foto-perfil{
+    background: var(--TemaContenido);
+    border-radius: 100%;
+    width: max-content;
+    overflow: hidden;
+    position: relative;
+    top: 4rem;
+    left: 3rem;
+}
+.caja-contenido .mini-header .caja-foto-perfil img{
+    width: 100px;
+    height: 100px;
+}
+/* agendaaa */
+form{
+    display: flex;
+}
+.semana{
+    background:var(--cajaSemana);
+    width: 250px;
+    height:max-content;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: .5rem;
+    border-radius: 10px;
+    margin-top: 2.4rem;
+}
+.semana label{
+    background:var(--TemaContenido);
+    padding: .5rem;
+    border-radius: 10px;
+    display: flex;
+    gap: .5rem;
+}
+.semana label input{
+    width: 16px;
+    height: 16px;
+}
+form button{
+    position: absolute;
+    font-size: 9px;
+    margin-top: 2.6rem;
+    margin-left: 10.9rem;
+    border-radius: 30px 30px 30px 0;
+    border: none;
+    padding: .25rem;
+    cursor: pointer;
+}
+/* datos personales */
+.icono{
+    width: 40px;
+    height: 40px;
+}
+/* redesssssssssssssssssssssss */
+.caja-redes{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 00px;
+    left: 1rem;
+}
+.boton-red{
+    width: 80%;
+    height: 60px;
+}
+
+.boton-red label{
+    font-size: 23px;
+}
+
+.boton-red label .icono{
+    width: 60px;
+    height: 60px;
+}

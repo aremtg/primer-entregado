@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=Press+Start+2P&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Press Start 2P', cursive;
+}
+:root{
+    --fondoPage: rgb(0, 0, 0);
+    --fondoNav: rgb(250, 250, 129);
+    --listaActica: rgba(250, 250, 250, 0.507);
+}
+body{
+    min-height: 100vh;
+    background: var(--fondoPage);
+}
+.caja-login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 290px;
+    height: 240px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 20px;
+}
+form label{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form label input{
+    width: 90%;
+    height: 25px;
+    padding: .5rem;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+form label input:focus{
+    border-bottom: 2px solid rgb(0, 38, 255);
+}
+#boton-ingresar{
+    border: none;
+    border-radius: 5px;
+    width: 60%;
+    height: 30px;
+    cursor: pointer;
+    box-shadow: 3px 3px rgb(26, 199, 170);
+}
+.caja-del-gato{
+    position: relative;
+    right: 2rem;
+    top: 2rem;
+}
+.caja-del-gato img{
+    width: 130px;
+    height: 200px;
+}
