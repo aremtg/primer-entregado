@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- este titulo se refleja en la pestaña de la pagina -->
     <title>LOGIN</title>
     <link rel="stylesheet" href="loginEstilo.css">
 </head>
 <body>
+    <!-- seccion con clase llamada caja-login contiene un titulo echo con h1 despues tiene un formulario donde a su vez tiene input que se usan para crear controles interactivos 
+    y usa label que estan asociados a los input que se usan para darle interfaz al usuario, tiene un boton tipo submit para enviar el formulario-->
     <section class="caja-login" >
     <form action="/index.html">
         <h1 class="title">Me.Archive</h1>
@@ -21,12 +24,14 @@
             <input required minlength="7" maxlength="17" id="contrasena" placeholder="contraseña" type="password" >
             <span class="validity"></span>
         </label>
-           <button id="boton-ingresar" type="submit">ingresar</button>
+            <button id="boton-ingresar" type="submit">ingresar</button>
     </form>
+    <!-- caja con imagen llamada con la etiqueta img en donde especifica la ruta de la imagen -->
     <div class="caja-del-gato">
-       <img src="ojoAbierto.svg" alt="">
+        <img src="ojoAbierto.svg" alt="">
     </div>
     </section>
+    <!-- archivos de java script su funcion es darle funcionalidad a siertos aspectos y funcionalidades a la pagina -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="javalogin.js"></script>
 </body>

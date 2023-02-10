@@ -1,4 +1,6 @@
+/*con este link importa el tipo de letra que se usara en la pagina*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=Press+Start+2P&display=swap');
+/* la etiqueta * aplica cambios a toda la pagina */
 *{
     margin: 0;
     padding: 0;
@@ -7,15 +9,18 @@
     list-style: none;
     font-family: 'Press Start 2P', cursive;
 }
+/* con root definimos variables que se podran usar despues, ayuda a hacer un mantenimiento mas rapido a la pagina */
 :root{
     --fondoPage: rgb(0, 0, 0);
     --fondoNav: rgb(250, 250, 129);
     --listaActica: rgba(250, 250, 250, 0.507);
 }
+
 body{
     min-height: 100vh;
     background: var(--fondoPage);
 }
+/* aqui le dice a la caja que use la propiedad flex y que ajuste al centro de todo */
 .caja-login{
     width: 100%;
     height: 100vh;
@@ -23,6 +28,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+/* en esta parte le da un tamaño especifo al formulario le da color al fondo coloca bordes y separacion interna y que se pocisionen de manera vertival */
 form{
     width: 290px;
     height: 240px;
@@ -34,12 +40,14 @@ form{
     padding: 1rem;
     border-radius: 20px;
 }
+/* aqui le dice a los label que use la propiedad flex y que ajuste al centro de todo */
 form label{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/* aqui le dice a los label que use la propiedad flex y que ajuste al centro de todo y que pierda su estilos es los bordes  */
 form label input{
     width: 90%;
     height: 25px;
@@ -49,9 +57,11 @@ form label input{
     border-left: none;
     border-right: none;
 }
+/* aqui coloca un borde en la parte de abajo */
 form label input:focus{
     border-bottom: 2px solid rgb(0, 38, 255);
 }
+/* modifica el boton y le da un tamaño especifico */
 #boton-ingresar{
     border: none;
     border-radius: 5px;
@@ -60,11 +70,13 @@ form label input:focus{
     cursor: pointer;
     box-shadow: 3px 3px rgb(26, 199, 170);
 }
+/* posiciona la imagen del gato */
 .caja-del-gato{
     position: relative;
     right: 2rem;
     top: 2rem;
 }
+/* defina el tamaño de la imagen */
 .caja-del-gato img{
     width: 130px;
     height: 200px;
