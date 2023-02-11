@@ -1,4 +1,6 @@
+/*esta url espara importar un tipo de letra*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=Press+Start+2P&display=swap');
+/*estas propiedades no ayudan a ajustar el contenedor global para eliminarle los bordes y los padding y que sus hijos no se salgan del contenedor*/
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +9,7 @@
     list-style: none;
     font-family: 'Press Start 2P', cursive;
 }
+/*estos son valores predefinidos para los estilos de la pagina*/
 :root{
     --fondoPage: rgb(255, 255, 255);
     --fondoNav: rgba(255, 255, 255, 0.459);
@@ -16,10 +19,12 @@
     --hoverBotones: rgb(122, 120, 120);
     
 }
+/*estilos para el tamaño minimo y el color de fondo del cuerpo*/
 body{
     min-height: 100vh;
     background: var(--fondoPage);
 }
+/*estilos que le dan forma tamaño y color a la barra de navegacion*/
 .caja-navegador{
     width: 220px;
     height: 555px;
@@ -28,6 +33,7 @@ body{
     box-shadow: 0 0px 21px 1px gray;
     overflow: hidden;
 }
+/*le dan proporciones y vistas en forma de columna a esta caja*/
 .mi-navegador{
     width: 100%;
     height: 100%;
@@ -35,24 +41,29 @@ body{
     display: flex;
     flex-direction: column;
 }
+/*le da espacionado y pocisionamiento al logo*/
 .mi-navegador .logo{
     margin-top: 3rem;
     margin-left: .5rem;
 }
+/*le da tamaño color y estilo al titulo*/
 .caja-navegador .logo h1{
     font-size: 19px;
     color: rgb(0, 0, 0);
     cursor: pointer;
 }
+/*le da color diferente a lo que este dentro del span*/
 .caja-navegador .logo h1 span{
     color:var(--espan);
 }
+/*le da propiedad flex y pocisionamiento*/
 .mi-navegador ul{
     display: flex;
     flex-direction: column;
     margin-top: 8rem;
     gap: 1rem;  
 }
+/*proporciona color al fondo coloca bordes al contenido y da pocisionamiento  */
 .mi-navegador ul li{
     background:var(--Botones);
     border-radius: 10px 0px 0px 10px;
@@ -60,14 +71,16 @@ body{
     width: 100%;
     height: max-content;
 }
-
+/*da un cambio de color al pasar el mouse por encima de la lista*/
 .mi-navegador ul li:hover{
     background-color:var(--hoverBotones);
     transition: .5s;
 }
+/*cambia de color al ser activado*/
 .mi-navegador ul .lista.active{
     background: var(--listaActivaYFooter);
 }
+/*cambia el tamaño y color a las letras le da un tamaño espeficifico  y los centra en su contenedor */
 .mi-navegador ul li a{
     font-size: 16px;
     color: black;
@@ -78,6 +91,7 @@ body{
     display: flex;
     align-items: center;
 }
+/* da pocision fija y color al fondo y alinie su contenido al centro */
 footer{
     position: fixed;
     background: var(--listaActivaYFooter);

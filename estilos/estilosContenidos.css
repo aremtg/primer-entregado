@@ -2,6 +2,8 @@
     --TemaContenido: rgb(227, 235, 236);
     --cajaSemana:rgb(50, 196, 176);
 }
+
+/*ajusta su contendio a una pocision, tamaño y color especifico  */
 .caja-contenido{
     position: absolute;
     top: 1rem;
@@ -15,6 +17,7 @@
     padding: 1rem;
     overflow: hidden;
 }
+/*coloca una imagen de fondo le dice que se ajuste a todo su contenedor y que no se repita le da un ancho y altura especifica con radio en sus esquinas*/
 .caja-contenido .mini-header{
     background-image: url(/foto-portada.jpg);
     background-repeat: no-repeat;
@@ -24,12 +27,14 @@
     height: 8rem;
     border-radius: 10px;
 }
+/*especifica que la pocision siga su flujo normal al documento y despues la pocisiona con margin*/
 .caja-contenido .mini-header h4{
     position: absolute;
     margin-top: 6.5rem;
     margin-left: 10rem;
     color: white;
 }
+/*especifica color tamaño y posicion a la cja*/
 .caja-contenido .mini-header .caja-foto-perfil{
     background: var(--TemaContenido);
     border-radius: 100%;
@@ -39,14 +44,17 @@
     top: 4rem;
     left: 3rem;
 }
+/* especifica que siempre tenga su anchura y altura siempre sea de 100pixeles */
 .caja-contenido .mini-header .caja-foto-perfil img{
     width: 100px;
     height: 100px;
 }
-/* agendaaa */
+/* usa la propiedad flex */
 form{
     display: flex;
 }
+
+/*se da color tamaño  y se pocisiona en vertical da un espaciado interno */
 .semana{
     background:var(--cajaSemana);
     width: 250px;
@@ -58,6 +66,7 @@ form{
     border-radius: 10px;
     margin-top: 2.4rem;
 }
+/* da color al fondo y da un espaciado interno */
 .semana label{
     background:var(--TemaContenido);
     padding: .5rem;
@@ -65,10 +74,12 @@ form{
     display: flex;
     gap: .5rem;
 }
+/* especifica una altura y tamaño */
 .semana label input{
     width: 16px;
     height: 16px;
 }
+/* se da pocision especifica  usa margenes arriba y a la izquierda quita el borde que trae por defecto */
 form button{
     position: absolute;
     font-size: 9px;
