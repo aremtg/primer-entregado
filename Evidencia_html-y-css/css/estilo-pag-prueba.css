@@ -1,0 +1,733 @@
+/* esta importando una fuente de letra desde internet--- este no funcionara o no se aplicara si n tiene internet */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+body{
+    /* esta fue la fuente que descargo */
+    font-family: 'Poppins', sans-serif;
+    
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{ 
+    margin: 0;
+}
+/* root contine variables guardadas que se utilizaran en un futuro,
+es una ventaja, mas rapido que ir a buscar y cambiar dentro de tantas cosas */
+:root{
+    --padding-container:100px 0;
+    --color-title:#001A49;
+}
+/* esto va para totos los elementos con la clase container
+-solo ocupa un 90%  de anchura de la pantalla 
+-overflow- para que no se salga nada de este contenedor
+-En el padding se esta usando una variable guardada en en rooot
+-el max whidth dice que ese sera el maximo de ancho que va tener, no se puede pasar*/
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+/*  */
+.hero{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    /* una forma de organizar lo que esta dentro, en filas y columnas */
+    display: grid;
+    /* para decir que este contendor tenga dos filas una con 100px y la otra lo que sobra del espacio del contenedor */
+    grid-template-rows: 100px 1fr;
+    color: white;
+    padding-top: 2rem;
+    
+}
+/* el before- en css es para agregar un pequeño contenido antes de el contenido original... pero al 
+poner absoluta este parece como si fuese algo agregado desde el html*/
+.hero:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* agrego el logo en el before del hero*/
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(../images/canasta.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    /* el z-index es para sobre poner o en este caso sobreponer pero de forma negativa o llevar atras */
+    z-index: -1;
+}
+/* volvio a utilizar una variable guardada
+    -el espacio de los bordes hacia dentro =padding= 0
+    -alinio los items */
+.nav{
+    --padding-container:0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding:0 20px ;
+    }
+
+.nav_logo img{
+    width: 6rem;
+}
+/* al poner el margin de la derecha en 1 rem del logo
+hizo que se viese pegado un poco mas al los botones del nav*/
+.nav_logo{
+    margin-right: 1rem;
+}
+/* quito la decoracion por defecto que tenia los enlaces
+-les dio color
+-y un grosor de fuente de bold */
+.nombre{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight:bold;
+}
+/* estas caracteristicas hacen posible el responsive de el navegador,, por eso se mueve o modifica cunado se apequeña la pantalla */
+.nav_link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+/* cuando el mouse pasa por el navegador */
+.nav_links:hover{
+    background: rgba(255, 255, 255, 0.493);
+}
+/* quito el estilo por defecto de las listas, como los giones o punto que aparece al lado */
+.nav_items{
+    list-style: none;
+}
+/* los enlaces o letras que son el nav */
+.nav_links{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.nav_menu{
+    margin-left: auto;
+    /* para que al pasar el mouse el cursor tenga forma de mano, como si fuese cliqueble */
+    cursor: pointer;
+    display: none;
+}
+.nav_img{
+    display: block;
+    width: 30px;
+}
+/* no esta en uso */
+.nav_close{
+    display: var(--show, none);
+}
+
+.hero_container{
+    max-width: 800px;
+    --padding-container:0;
+    display: grid;
+    grid-auto-rows:max-content ;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero_tittle{
+    /* tamaño de la letra de este titulo */
+    font-size: 3rem;
+}
+.hero_paragraph{
+    margin-bottom: 20px;
+}
+.cta{
+    display: inline-block;
+    background-color: #2091F9;
+    justify-self: center;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 30px;
+    color: white;
+    transition: all .3s;
+}
+.cta:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+.about{
+    text-align: center;
+}
+.subtitle{
+    --color-title:#001A49;
+    font-size:2rem ;
+    margin-bottom: 25px;
+}
+.about_main{
+    /* solo el padding de arriba */
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    /* que nada se salga de este contenedor */
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+.about_paragraph{
+    line-height: 1.7;
+}
+
+.about_icons{
+    display:grid;
+    gap: 1em;
+    justify-items: center;
+    width: 300px;
+    overflow: hidden;
+    margin:0 auto ;
+}
+
+.about_icon{
+    width: 300px;
+}
+
+.knowledge{
+    background-color: #e5e5f7;
+    /* la opacidad de el fondo de la inf sobre los puntos */
+    opacity: 0.8;
+    /* una imagen de fondo pero con un color medio opaco encima de color azul */
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    overflow:hidden ;
+}
+
+.knowledge_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* la separacion de los items que estan dentro de este contenedor */
+    gap: 1em;
+    align-items: center;
+}
+.knowlegde_picture{
+    /*  el maximo de ancho que va a tener */
+    max-width: 100px;
+}
+.knowledge_paragraph{
+    /* la distancia entre líneas del parrafo */
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+.knowledge_img{
+width: 100%;
+display: block;
+}
+
+/*price*/
+/* la seccion de los bonos */
+.price{
+    /* el texto se centre  */
+    text-align: center;
+}
+.price_table{
+    padding-top: 60px;
+    /* el display flex y flex wrap dice que los elementos dentro del contenedor se ajustarán en
+    varias líneas si superan el ancho del contenedor */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.price_element{
+    background-color: #e5e5f7;
+    text-align: center;
+    border-radius: 10px;
+    width: 330px;
+    padding: 40px;
+    --color-plan:#696871;
+    --color-price:#1D293F;
+    --bg-cta:#fff;
+    --color-cta:#5454D4;
+    --color-items:#696871;
+}
+/* el nombre del bono */
+.price_name{
+    color: var(--color-plan);
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+/* esto es la parte del precio del bono */
+.price_price{
+    font-size: 2.5rem;
+    color: var(--color-price);
+}
+/* contenedor de la lista de lo que conteien eel bono */
+.price_items{
+    /* margen solo en la parte superior para alegar este item */
+    margin-top: 35px;
+    display: grid;
+    gap: 1em;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color:var(--color-items);
+}
+/* boton que dice comprar ahora, para el bono */
+.price_cta{
+    background-color: var(--bg-cta);
+    display: block;
+    padding: 20px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: var(--bg-cta);
+    font-weight: 600;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+    color: var(--color-cta);
+    position: relative;
+    overflow: hidden;
+    /* hará que el elemento realice una transición suave,
+    cuando el mouse pasa sobre el elemento o cuando se hace clic en él */
+    transition: all .3s ease-in-out;
+}
+.price_cta:hover{
+    background: #001a49d0;
+    color: #fff;
+    /* hace que al pasar el mouse por encima este paresca que se acerca */
+    transform: scale(1.1);
+
+}
+
+
+.price_element--best{
+    background-color: #ff7143;
+    --color-plan:rgb(255 255 255 / 75%);
+    --color-price:#fff;
+    --bg-cta:#9f3919;
+    --color-cta:#fff;
+    --color-items:#fff;
+    width: 370px;
+    padding: 60px 40px;
+}
+/* a el contenedor de que contiene un div que es el contenedor de todos los testimonios*/
+.testimony{
+    background-color: #e5e5f7;
+}
+/* este es el div contenedor de totos los testimonios
+los items estan alineados y en columna, tambien con caracteristicas grid para apoyar el responsive */
+.testimony_container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap: 1em;
+    align-items: center;
+}
+/* seccion -- que contiene cada testimonio */
+.testimony_body{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    /* para que ningun evento del pointer funcione */
+    pointer-events: none;
+
+}
+/* sin uso */
+.testimony_body--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition:opacity 1.5s ease-in-out;
+}
+/* imagen de un vector hombre */
+.testimony_img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+/* donde esta el texto del testimonio*/
+.testimony_text{
+    max-width: 700px;
+}
+
+.testimony_arrow{
+    width: 90%;
+    cursor: pointer;
+}
+/* parte que dice desde hace cuanto es cliente */
+.testimony_course{
+    background-color: royalblue;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+}
+
+/*questions*/
+/* seccion de preguntas y respuestas que tiene dentro
+el contenedor de preguntas y respuestas  */
+.questions{
+    text-align: center;
+}
+/* este es el contenedor de preguntas y respuestas */
+.questions_container{
+    display: grid;
+    gap: 2em;
+    padding: 50px;
+    padding-bottom: 100px;
+}
+/* practicamente el estilo de borde de este cajoncito de la pregunta
+frecuente */
+.questions_padding{
+    padding: 0;
+    transition: padding .3s;
+    border: 1px solid #5454d4;
+    border-radius: 6px;
+}
+.questions_padding--add{
+    padding-bottom: 30px;
+}
+/* contenedor de cada pregunta y sus caracteristicas */
+.questions_answer{
+    padding: 0 30px 0;
+    overflow: hidden;
+}
+/* el texto de cada pregunta */
+.questions_title{
+    text-align: left;
+    display: flex;
+    font-size: 20px;
+    padding: 30px 0 30px;
+    cursor: pointer;
+    color: var(--color-title);
+    justify-content: space-between;
+    
+}
+/* es el botoncito azul con punta- promete ser la palanca
+para mostrar y ocultar el parrafo de la respuesta */
+.questions_arrow{
+    border-radius: 50%;
+    background-color: var(--color-title);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    margin-left: 10px;
+    transition: transform .3s;
+}
+/* estas serias las caracteristicas que tendrian funcionalidad con js */
+.question_arrow--rotate{
+    transform: rotate(180deg);
+}
+.questions_show{
+    text-align: left;
+    height: 0;
+    transition: height .3s;
+}
+.questions_img{
+    display: block;
+}
+/* --------------------------------------- */
+
+/* este es el ultimo parrafo */
+.questions_copy{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    
+}
+
+
+/*Footer*/
+
+.footer{
+    background-color: #1D293F;
+}
+/* titulo que dice "curso Css" */
+.footer_title{
+font-weight: 300;
+font-size: 2rem;
+margin-bottom: 30px;
+}
+
+/* le da el color de una alos dos titulo, el de "dcurso css y suscribete"
+la coma hace que se apliquen a los dos... si fuese sin coma y tuviese las
+mismas clases solo se aplicaria a la ultima escrita
+en este caso al foorter newsletter */
+.footer_title, .footer_newsletter{
+    color: #fff;
+}
+
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding-bottom: 60px;
+}
+/* mini navegador, semejante al de arriva */
+.nav--footer{
+    padding-bottom: 20px;
+    display: grid;
+    gap: 1em;
+    grid-auto-flow: row;
+    height: 100%;
+}
+/* cada enlace */
+.nav_link--footer{
+    display: flex;
+    margin: 0;
+    margin-right: 20px;
+    flex-wrap: wrap;
+}
+/* contenedor div de los dos botones- input y sumit */
+.footer_inputs{
+    margin-top:10px;
+    display: flex;
+    overflow: hidden; 
+}
+/* input donde va el email */
+.footer_input{
+    background-color: #fff;
+    height: 50px;
+    display: block;
+    padding-left: 10px;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    margin-right: 16px;
+}
+/* boton para enviar lo puesto en el input blanco- email*/
+.footer_submit{
+    margin-left:auto;
+    display:inline-block;
+    height: 50px;
+    padding: 0 20px;
+    background-color: #2091F9;
+    border: none;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 6px;
+    
+}
+
+/* lo ultimo- donde deberian estar los enlaces e iconos de
+redes sociales y da los creditos */
+.footer_copy{
+    --padding-conatiner:30px 0;
+    text-align: center;
+    color: #ffffff;
+}
+.footer_copyright{
+    font-weight: 300;
+}
+.footer_icons{
+    margin-bottom: 10px;
+
+}
+.footer_img{
+    width: 30px;
+}
+
+
+/*media queies*/
+/* el responsive - le cambia las propiedades a varios elementos para cuando
+tenga cierto tamaño la pantalla */
+@media (max-width:768px){
+    .nav_menu{
+        display: block;
+    }
+    .nav{
+        background: none;
+    }
+    
+
+    .nav_link-menu{
+        position: fixed;
+        background-color: rgb(134, 204, 134);
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: .7s;
+        
+    }
+    
+
+    .nav_link--show{
+        --show:block;
+        opacity: 1;
+        pointer-events: unset;
+    }
+    .nav_close{
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+    .hero_tittle{
+        font-size: 2.5rem;
+    }
+
+    .about_main{
+        gap: 2em;
+    }
+    
+    .about_icons:last-of-type{
+        grid-column: 1/-1;
+    }
+
+    
+
+    .knowledge_container{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        gap: 3em;
+        text-align: center;
+    }
+    .knowledge_picture{
+        grid-row: 1/2;
+        justify-self: center;
+    }
+
+    .testimony_container{
+        grid-template-columns: 30px 1fr 30px;
+    }
+    .testimony_body{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        gap: 3em;
+        justify-items: center;
+    }
+
+    .testimony_img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .questions_copy{
+        width: 100%;
+    }
+
+    .footer_container{
+        flex-wrap: wrap;
+    }
+
+    .nav--footer{
+        width: 100%;
+        justify-items: center;
+    }
+    .nav_link--footer{
+        width: 100%;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+    
+    .footer_form{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .footer_input{
+        flex: 1;
+    }
+}
+
+
+@media(max-width:500px){
+    .hero_tittle{
+        font-size: 2rem;
+    }
+
+    .hero_paragraph{
+        font-size: 1rem;
+    }
+    .subtitle{
+        font-size: 1.8rem;
+    }
+    .price_element{
+        width: 90%;
+    }
+
+    .price_element--best{
+        width: 90%;
+        padding: 40px;
+    }
+
+    .price_price{
+        font-size: 2rem;
+    }
+    .testimony{
+        --padding-container:60px;
+    }
+
+    .testimony_container{
+        grid-template-columns: 28px 1fr 28px;
+        gap: .9em;
+    }
+
+    .testimony_arrow{
+        width: 100%;
+    }
+
+    .testimony_course{
+        margin-top: 15px;
+    }
+
+    .questions_title{
+        font-size: 1rem;
+    }
+
+    .nav_link--footer{
+        justify-content: space-between;
+    }
+    .nav--footer{
+        padding-bottom: 60px;
+    }
+
+    .footer_title{
+        justify-self: start;
+        margin: 15px;
+    }
+    
+    .footer_inputs{
+        flex-wrap: wrap;
+    }
+    .footer_input{
+        flex-basis: 100%;
+        margin: 0;
+        margin-bottom: 16px;
+        
+    }
+
+    .footer_submit{
+        margin: 0;
+        width: 100%;
+    }
+}
