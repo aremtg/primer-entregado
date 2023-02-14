@@ -1,0 +1,108 @@
+*{
+    padding: 0%;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url(../imagenes/maxresdefault.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor-c-c{
+    width: 600px;
+    padding: 2rem;
+    margin: 3rem;
+    background-color: darkgrey;
+    text-align: center;
+
+}
+.tit{
+    padding: 1rem;
+    font-size: 3.5rem;
+}
+.intro{
+    padding: 1.5em;
+    font-size: 1.4rem;
+}
+.crear{
+    padding: 1rem;
+
+}
+.contenedor-c-c input{
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+    border: none;
+    border-bottom: white thin solid;
+    text-align: center;
+    outline: none;
+    padding: 1rem 0;
+    font-size: 1rem;
+    color: black;
+}
+.contenedor-c-c input[type="button"]{
+    width: 60%;
+    margin: auto;
+    border: solid thin white;
+    padding: .7rem;
+    border-radius: 3rem;
+    background-color: #fff;
+    font-weight: 600;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: .8rem;
+    cursor: pointer;
+    color: #222;
+}
+.contenedor-c-c input:hover[type="button"]{
+    background-color: #690;
+    border: solid thin #690;
+}
+@media(max-width: 430px){
+    .contenedor-c-c{
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        margin: 3rem;
+        background-color: darkgrey;
+        text-align: center;
+    
+    }
+    .contenedor-c-c input{
+        width: 100%;
+        height: 10%;
+        display: block;
+        margin: 3rem;
+        border: none;
+        border-bottom: white thin solid;
+        text-align: center;
+        outline: none;
+        padding: 2rem;
+        font-size: 1rem;
+        color: black;
+    }
+    .contenedor-c-c input[type="button"]{
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        border: solid thin white;
+        padding: .7rem;
+        border-radius: 3rem;
+        background-color: #fff;
+        font-weight: 600;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        font-size: .8rem;
+        cursor: pointer;
+        color: #222;
+    }
+    .contenedor-c-c input:hover[type="button"]{
+        background-color: #690;
+        border: solid thin #690;
+    }
+
+}
